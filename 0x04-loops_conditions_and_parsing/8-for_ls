@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-#Trying to list content of workding directory using loop
+# Trying to list content of working directory using loop
 
-ls *>list
-for i in `cat list`; do
-    echo "${i[@]#*-}"
+for file in *; do
+    echo "${file#*-}" 
 done
+

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#FIZZBUZZ CODE FOR BASH
+counter=1
+
+while [ $counter -le 100 ]; do
+    if [ $((counter % 15)) -eq 0 ]; then
+        echo "FizzBuzz"
+    elif [ $((counter % 5)) -eq 0 ]; then
+        echo "Buzz"
+    elif [ $((counter % 3)) -eq 0 ]; then
+        echo "Fizz"
+    else
+        echo "$counter"
+    fi
+    ((counter++))
+done

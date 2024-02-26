@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
-# This script is displaying numbers using case system
-hour=1
 
-my_function() {
-	while [ $minute -le 59 ]; do
-            echo "$minute"
-            ((minute++))
-	done
-}
+# Display time for 12 hours and 59 minutes
+hour=0
+
 while [ $hour -le 12 ]; do
     minute=1
-    echo "Hour: $hour"
-    my_function
+    while [ $minute -le 59 ]; do
+        printf "%02d:%02d\n" $hour $minute
+        ((minute++))
+    done
     ((hour++))
 done

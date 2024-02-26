@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Trying to list content of workding directory using loop
+
+ls *>list
+for i in `cat list`; do
+    echo "${i[@]#*-}"
+done

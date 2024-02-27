@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# displays a list of currently running processes
+for i in $(ls -1 /proc/ | egrep "([0-9]+)"); do
+    # Check if the cmdline file exists for the process
+    if [[ -e "/proc/$i/cmdline" ]]; then
+        # Check if the process cmdline contains "bash"
+        if fgrep -q "bash" "/proc/$i/cmdline"; then
+            # If found, print the process ID and cmdline
+            echo "$i bash"
+        fi
+    fi
+done

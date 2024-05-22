@@ -1,0 +1,6 @@
+# ssh config fie
+Host myserver
+    HostName 100.26.136.83
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no

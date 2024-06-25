@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This script retrieves and displays the TODO list progress for a given employee
+using the JSONPlaceholder API.
+"""
+
 
 import requests
 import sys
@@ -17,11 +22,11 @@ def fetch_employee_data(employee_id):
 
 def display_todo_progress(employee_id):
     user_data, todos_data = fetch_employee_data(employee_id)
-    employee_name = user_data.get("name")
+    e_name = user_data.get("name")
     total_tasks = len(todos_data)
     done_tasks = [task for task in todos_data if task.get("completed")]
-    len_done_tasks = len(done_tasks)
-    print(f"Employee {employee_name} is done with tasks({len_done_tasks}/{total_tasks}):")
+    len_done = len(done_tasks)
+    print(f"Employee {e_name} is done with tasks({len_done}/{total_tasks}):")
     for task in done_tasks:
         print(f"\t {task.get('title')}")
 

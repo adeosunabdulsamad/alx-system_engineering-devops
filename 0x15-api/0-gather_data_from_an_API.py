@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""This script retrieves and displays the TODO list progress for a given employee using the JSONPlaceholder API"""
+"""
+This script retrieves and displays the TODO list progress
+for a given employee using the JSONPlaceholder API.
+fetch the restg
+"""
+
 
 import requests
 import sys

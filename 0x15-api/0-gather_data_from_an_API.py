@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-This script retrieves and displays the TODO list progress for a given employee
-using the JSONPlaceholder API.
+This script retrieves and displays the TODO list progress for a given employee using the JSONPlaceholder API.
 """
 
 
@@ -10,6 +9,16 @@ import sys
 
 
 def fetch_employee_data(employee_id):
+    """
+    Fetches data for a given employee including their user information and TODO list.
+
+    Args:
+        employee_id (int): The ID of the employee.
+
+    Returns:
+       tuple: 
+          A tuple containing user data and TODO lis
+    """
     base_url = "https://jsonplaceholder.typicode.com"
     user_response = requests.get(f"{base_url}/users/{employee_id}")
     user_data = user_response.json()

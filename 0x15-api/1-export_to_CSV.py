@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """This script exports task details for an employee"""
 
-
 import pandas as pd
 import requests
 import sys

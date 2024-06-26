@@ -2,7 +2,7 @@
 """
 This script retrieves and displays the TODO list progress
 for a given employee using the JSONPlaceholder API.
-fetch the restg
+employee_id (int): The ID of the employee.
 """
 
 
@@ -12,13 +12,13 @@ import sys
 
 def fetch_employee_data(employee_id):
     """
-    Fetches data for a given employee including their user information and TODO list.
+    Fetches data for a given employee including their user information
 
     Args:
         employee_id (int): The ID of the employee.
 
     Returns:
-       tuple: 
+       tuple:
           A tuple containing user data and TODO lis
     """
     base_url = "https://jsonplaceholder.typicode.com"
@@ -32,6 +32,11 @@ def fetch_employee_data(employee_id):
 
 
 def display_todo_progress(employee_id):
+    """
+    Displays the TODO list progress for a given employe
+    Args:
+        employee_id (int): The ID of the employee.
+    """
     user_data, todos_data = fetch_employee_data(employee_id)
     e_name = user_data.get("name")
     total_tasks = len(todos_data)
@@ -52,5 +57,4 @@ if __name__ == "__main__":
     except ValueError:
         print("Employee ID must be an integer")
         sys.exit(1)
-
-display_todo_progress(employee_id)
+    display_todo_progress(employee_id)

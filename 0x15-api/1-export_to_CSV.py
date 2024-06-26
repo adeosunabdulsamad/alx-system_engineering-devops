@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This script exportthe csv format about the task detailsbUsing API.
-employee_id (int): The ID of the employee.
+This script exports task details for an employee in CSV format using an API.
+
+Employee ID (int): The ID of the employee whose task details are exported.
 """
 
 

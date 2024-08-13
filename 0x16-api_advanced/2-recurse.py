@@ -2,6 +2,7 @@
 """Module that prints list of posts listed for a given subreddit"""
 import requests
 
+
 def recurse(subreddit, hot_list=[], after=None):
     """
     Recursively queries the Reddit API and returns a list of hot articles
@@ -28,7 +29,3 @@ def recurse(subreddit, hot_list=[], after=None):
         return recurse(subreddit, hot_list, after)
     else:
         return hot_list
-
-# Example usage:
-# print(recurse('programming'))  # Will return a list of all hot article titles in the 'programming' subreddit
-# print(recurse('this_is_a_fake_subreddit'))  # Will return None
